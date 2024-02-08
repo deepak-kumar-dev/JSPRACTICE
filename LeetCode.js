@@ -1,7 +1,6 @@
 /**
- * Day 1
+ * Day 1 : 2620 Counter
  * 
- * Counter : 
  * Given an integer n, return a counter function. 
  * This counter function initially returns n and then returns 1
  * more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc).
@@ -26,3 +25,39 @@ console.log(counter()) // 12
  */
 
 //-------------------------------------------------------------------------
+
+
+/**
+ * Day 2 : 2265 Counter 2
+ * 
+ * Write a function createCounter. It should accept an initial integer init. It should return an object with three functions.
+ * The three functions are:
+ * increment() increases the current value by 1 and then returns it.
+ * decrement() reduces the current value by 1 and then returns it.
+ * reset() sets the current value to init and then returns it.
+ * @param {integer} init
+ * @return { increment: Function, decrement: Function, reset: Function }
+ */
+var createCounter = function(init) {
+    var value = init;
+    var increment = () => {
+        return ++value;
+    }
+    var decrement = () => {
+        return --value;
+    }
+    var reset = () => {
+        value = init;
+        return value;
+    }
+
+    return {increment, decrement, reset}
+    
+};
+
+/**
+ * const counter = createCounter(5)
+ * counter.increment(); // 6
+ * counter.reset(); // 5
+ * counter.decrement(); // 4
+ */

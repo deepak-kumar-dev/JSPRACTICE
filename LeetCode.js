@@ -81,3 +81,19 @@ Array.prototype.last = function() {
  * const arr = [1, 2, 3];
  * arr.last(); // 3
  */
+
+
+/**
+ * Day 3 Problem 2 : 2667. Create Hello World Function
+ * 
+ * 
+ * @return {Function}
+ */
+var createHelloWorld = function() {
+    return () => "Hello World";
+};
+
+/**
+ * const f = createHelloWorld();
+ * f(); // "Hello World"
+ */

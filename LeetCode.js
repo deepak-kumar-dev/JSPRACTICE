@@ -142,3 +142,27 @@ var once = function(fn) {
  * onceFn(1,2,3); // 6
  * onceFn(2,3,6); // returns undefined without calling fn
  */
+
+
+/**
+ * 
+ * Day 4 Problem 2 : 2727. Is Object Empty
+ * 
+ * @param {Object|Array} obj
+ * @return {boolean}
+ */
+var isEmpty = function(obj) {
+    if(Array.isArray(obj)){
+        if(obj.length == 0){
+            return true;
+        }else{
+            return false;
+        }
+    }else{
+        if(Object.keys(obj).length){
+            return false
+        }else{
+            return true
+        }
+    }
+};

@@ -256,3 +256,23 @@ var reduce = function(nums, fn, init) {
     }
     return result;
 };
+
+
+
+/**
+ * 
+ * Day 8 : 2677. Chunk Array
+ * @param {Array} arr
+ * @param {number} size
+ * @return {Array}
+ */
+var chunk = function(arr, size) {
+    let chunkedArray = []
+
+for (let i = 0; i < arr.length; i += size) {
+    let chunk = arr.slice(i, i + size);
+    chunkedArray.push(chunk);
+}
+
+return chunkedArray;
+};

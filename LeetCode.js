@@ -303,4 +303,21 @@ var compose = function(functions) {
  * fn(4) // 9
  */
 
+/**
+ * 
+ *   Day 9 Problem 2 : 2634. Filter Elements from Array
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ */
+var filter = function(arr, fn) {
+    let rArray = [];
+    for(let i = 0; i < arr.length; i++){
+       if(fn(arr[i], i)){
+            rArray.push(arr[i])
+       }
+    }
+    return rArray;
+};
+
 

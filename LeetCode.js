@@ -320,4 +320,26 @@ var filter = function(arr, fn) {
     return rArray;
 };
 
+//------------------------------------
+
+/**
+ * 
+ * Day 10: 268. Missing Number
+ * 
+ * @param {number[]} nums
+ * @return {number}
+ */
+var missingNumber = function(nums) {
+    // for(let i = 0; i <= nums.length ; i++){
+    //     if(nums.indexOf(i) < 0){
+    //         return i;
+    //     }
+    // }
+    // return 0;
+    const n = nums.length;
+    const total = (n * (n+1)) / 2;
+    const realTotal = nums.reduce((acc, num) => acc+num, 0);
+    return total - realTotal;
+};
+
 

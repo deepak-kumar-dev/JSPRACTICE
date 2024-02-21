@@ -360,4 +360,21 @@ async function sleep(millis) {
  * sleep(100).then(() => console.log(Date.now() - t)) // 100
  */
 
+/**
+ * Day 11: Problem 2: 2723. Add Two Promises
+ * 
+ * @param {Promise} promise1
+ * @param {Promise} promise2
+ * @return {Promise}
+ */
+var addTwoPromises = async function(promise1, promise2) {
+    let res = await promise1 + await promise2;
+    return new Promise(resolve => resolve(res));
+};
+
+/**
+ * addTwoPromises(Promise.resolve(2), Promise.resolve(2))
+ *   .then(console.log); // 4
+ */
+
 

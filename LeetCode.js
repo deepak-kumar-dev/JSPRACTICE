@@ -377,4 +377,11 @@ var addTwoPromises = async function(promise1, promise2) {
  *   .then(console.log); // 4
  */
 
+//////////////////////////-----------
+
+/**
+ * Day 12
+ * 
+ */
+
 

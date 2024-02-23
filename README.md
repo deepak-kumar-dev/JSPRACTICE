@@ -1,2 +1,2 @@
-I'm using this brnach for practicing core JS.
-DSA, Leetcode & other basic JS concept, BASICS.
+I'm using this branch for practicing core JS.
+DSA, Leet code & other basic JS concept, BASICS.

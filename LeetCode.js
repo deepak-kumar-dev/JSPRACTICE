@@ -380,8 +380,26 @@ var addTwoPromises = async function(promise1, promise2) {
 //////////////////////////-----------
 
 /**
- * Day 12
  * 
+ *  Day 12 : 2625. Flatten Deeply Nested Array
+ * 
+ * @param {Array} arr
+ * @param {number} depth
+ * @return {Array}
  */
+var flat = function (arr, n) {
+    const newArr = [];
 
+    function helper(arr, depth) {
+        for (const val of arr) {
+            if (Array.isArray(val) && depth < n) {
+                helper(val, depth + 1);
+            } else {
+                newArr.push(val);
+            }
+        }
+        return newArr;
+    }
+    return helper(arr, 0);
+}
 

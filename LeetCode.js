@@ -403,3 +403,15 @@ var flat = function (arr, n) {
     return helper(arr, 0);
 }
 
+
+/**
+ * 
+ * Day 13: 2724. Sort By
+ * @param {Array} arr
+ * @param {Function} fn
+ * @return {Array}
+ */
+var sortBy = function(arr, fn) {
+    return arr.sort((a, b) => fn(a) - fn(b));
+};
+

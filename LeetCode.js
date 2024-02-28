@@ -455,3 +455,30 @@ ArrayWrapper.prototype.toString = function() {
  * String(obj2); // "[3,4]"
  */
 
+
+
+//-------------------------------------
+
+
+/**
+ * 
+ * Day 15 : 2648. Generate Fibonacci Sequence
+ * @return {Generator<number>}
+ */
+var fibGenerator = function* () {
+    var secondLast = 0;
+    var last = 1;
+    while (true) {
+        yield secondLast;
+        var next = secondLast + last;
+        secondLast = last;
+        last = next;
+    }
+};
+
+/**
+ * const gen = fibGenerator();
+ * gen.next().value; // 0
+ * gen.next().value; // 1
+ */
+

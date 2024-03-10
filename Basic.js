@@ -42,3 +42,19 @@ var fizzBuzz = function(n) {
 var smallestEvenMultiple = function(n) {
     return n%2 === 0 ? n : n*2;
 };
+
+//--------------------------------------
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var sumOfMultiples = function(n) {
+    let res = 0;
+    for(let i=1; i<=n; i++){
+        if(i%3==0 || i%5 ==0 || i%7 == 0 ){
+            res = res+i;
+        }
+    }
+    return res;
+};

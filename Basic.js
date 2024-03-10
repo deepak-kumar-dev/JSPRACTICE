@@ -78,3 +78,27 @@ var numberOfSteps = function(num) {
     }
     return count;
 };
+
+//---------------------------------------------
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var differenceOfSum = function(nums) {
+    let aSum = 0;
+    let dSum = 0;
+    for(let i = 0; i < nums.length; i++){
+        aSum = aSum + nums[i];
+        if(nums[i] >= 10){
+            let c = nums[i];
+            while(c>0){
+                dSum = dSum + (c%10);
+                c = Math.floor(c/10);
+            }
+        }else{
+            dSum = dSum + nums[i];
+        }
+    }
+    return aSum - dSum
+};

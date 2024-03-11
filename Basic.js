@@ -95,10 +95,27 @@ var differenceOfSum = function(nums) {
             while(c>0){
                 dSum = dSum + (c%10);
                 c = Math.floor(c/10);
-            }
+            } 
         }else{
             dSum = dSum + nums[i];
         }
     }
     return aSum - dSum
+};
+
+//-----------------------------------
+
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var mySqrt = function(x) {
+    if(x == 0) return x;
+    for(let i=1; i<= x;i++){
+        if(i*i == x){
+            return i;
+        }else if(i*i > x){
+            return i-1;
+        }
+    }
 };

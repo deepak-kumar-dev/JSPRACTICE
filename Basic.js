@@ -119,3 +119,21 @@ var mySqrt = function(x) {
         }
     }
 };
+
+
+//====================================
+
+/**
+ * @param {number} numBottles
+ * @param {number} numExchange
+ * @return {number}
+ */
+var numWaterBottles = function(numBottles, numExchange) {
+    let count = numBottles;
+    let rem = numBottles;
+    while(rem >= numExchange){
+        count = count + Math.floor(rem/numExchange);
+        rem = Math.floor(rem/numExchange) + (rem%numExchange)
+}
+    return count;
+};

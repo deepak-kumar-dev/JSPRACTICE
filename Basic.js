@@ -137,3 +137,15 @@ var numWaterBottles = function(numBottles, numExchange) {
 }
     return count;
 };
+
+//---------------------------------------------
+
+/**
+ * @param {number} celsius
+ * @return {number[]}
+ */
+var convertTemperature = function(celsius) {
+    // Kelvin = Celsius + 273.15
+    // Fahrenheit = Celsius * 1.80 + 32.00
+    return [celsius + 273.15, celsius * 1.80 + 32.00]
+};

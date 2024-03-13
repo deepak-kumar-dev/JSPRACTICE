@@ -149,3 +149,24 @@ var convertTemperature = function(celsius) {
     // Fahrenheit = Celsius * 1.80 + 32.00
     return [celsius + 273.15, celsius * 1.80 + 32.00]
 };
+
+
+//------------------------------------------
+
+/**
+ * @param {number} n
+ * @param {number} m
+ * @return {number}
+ */
+var differenceOfSums = function(n, m) {
+    let d = 0;
+    let nd = 0;
+    for(let i = 1; i<=n; i++){
+        if(i%m == 0){
+            d = d+i;
+        }else{
+            nd = nd+i;
+        }
+    }
+    return nd - d;
+};

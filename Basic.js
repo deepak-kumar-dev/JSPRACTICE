@@ -204,3 +204,22 @@ var isPalindrome = function(x) {
     }
     return rev == x;
 };
+
+
+//----------------------------------------
+
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var reverse = function (x) {
+    let rev = 0, n = Math.abs(x);
+    while (n > 0) {
+        rev = n == x ? rev + n % 10 : (rev * 10) + n % 10;
+        n = Math.floor(n / 10, 0);
+    }
+    if (rev > (Math.pow(2, 31) - 1) || rev < -(Math.pow(2, 31) - 1)) {
+        return 0
+    }
+    return x > 0 ? rev : -rev;
+};

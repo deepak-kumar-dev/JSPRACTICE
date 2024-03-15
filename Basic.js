@@ -188,3 +188,19 @@ var subtractProductAndSum = function(n) {
     }
     return mul - sum;
 };
+
+//-------------------------------------
+
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
+    if(x < 0) return false;
+    let rev = 0, n = x;
+    while(n > 0){
+        rev = n == x? rev + n%10: (rev*10)+ n%10;
+        n = Math.floor(n/10,0);
+    }
+    return rev == x;
+};

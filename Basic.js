@@ -223,3 +223,31 @@ var reverse = function (x) {
     }
     return x > 0 ? rev : -rev;
 };
+
+
+//=======================================
+
+/**
+ * @param {number} candies
+ * @param {number} num_people
+ * @return {number[]}
+ */
+var distributeCandies = function (candies, num_people) {
+    let array = Array.from({ length: num_people }, (_, i) => 0);
+    let cand = candies;
+    let a = 0;
+    while (cand > 0) {
+        for (let i = 0; i < array.length; i++) {
+            if (cand >= a + i + 1) {
+                cand = cand - (a + i + 1)
+                array[i] = array[i] + a + i + 1;
+            } else {
+                array[i] = array[i] + cand;
+                cand = cand - cand;
+                break;
+            }
+        }
+        a = a + array.length;
+    }
+    return array;
+};

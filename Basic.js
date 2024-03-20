@@ -280,3 +280,18 @@ var isSameAfterReversals = function (num) {
     if (num % 10 == 0) return false;
     return true;
 };
+
+//----------------------------------------
+
+/**
+ * @param {number} num
+ * @return {number}
+ */
+var countDigits = function (num) {
+    let rev = 0, n = num;
+    while (n > 0) {
+        rev = num % (n % 10) == 0 ? rev+1 : rev;
+         n = Math.floor(n / 10, 0)
+    }
+    return rev;
+};

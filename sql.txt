@@ -3,3 +3,6 @@ select * from cinema where (id%2) != 0 AND description != 'boring' order by rati
 
 # Write your MySQL query statement below
 select name, population, area from world where population >= 25000000 OR area >= 3000000;
+
+# Write your MySQL query statement below
+select product_id from Products where low_fats = 'Y' AND recyclable = 'Y';

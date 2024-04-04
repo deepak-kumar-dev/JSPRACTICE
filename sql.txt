@@ -6,3 +6,6 @@ select name, population, area from world where population >= 25000000 OR area >=
 
 # Write your MySQL query statement below
 select product_id from Products where low_fats = 'Y' AND recyclable = 'Y';
+
+# Write your MySQL query statement below
+select name from Customer where NOT referee_id = 2 or referee_id is null;

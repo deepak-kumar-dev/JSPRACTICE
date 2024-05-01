@@ -306,3 +306,21 @@ var isPowerOfTwo = function(n) {
     if (n <= 0) return 0
     return ((n & (n - 1)) === 0)
 };
+
+//--------------------------------------------
+
+/**
+ * 
+ * 1929. Concatenation of Array
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var getConcatenation = function(nums) {
+    // let anss = [];
+    // for(let i = 0; i< nums.length; i++){
+    //     anss[i] = nums[i];
+    //     anss[i+nums.length] = nums[i]
+    // }
+    // return anss;
+    return nums.concat(nums);
+};

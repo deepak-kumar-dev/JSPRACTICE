@@ -481,3 +481,18 @@ var fibGenerator = function* () {
  * gen.next().value; // 0
  * gen.next().value; // 1
  */
+
+
+/**
+ * 
+ * 1672. Richest Customer Wealth
+ * @param {number[][]} accounts
+ * @return {number}
+ */
+var maximumWealth = function(accounts) {
+    let rA = [];
+    for(let i=0; i<accounts.length;i++){
+        rA.push(accounts[i].reduce((a, b) => {return a+b}));
+    }
+    return Math.max(...rA)
+};

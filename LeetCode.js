@@ -496,3 +496,21 @@ var maximumWealth = function(accounts) {
     }
     return Math.max(...rA)
 };
+
+/**
+ * 
+ * 1470. Shuffle the Array
+ * @param {number[]} nums
+ * @param {number} n
+ * @return {number[]}
+ */
+var shuffle = function(nums, n) {
+    const fArray = nums.slice(0, n);
+    const sArray = nums.slice(n, nums.length);
+    let res = [];
+    for(let i = 0; i <= n-1; i++){
+        res.push(fArray[i]);
+        res.push(sArray[i]);
+    }
+    return res;
+};

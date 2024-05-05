@@ -514,3 +514,18 @@ var shuffle = function(nums, n) {
     }
     return res;
 };
+
+/**
+ * 
+ * 1732  Find the Highest Altitude
+ * @param {number[]} gain
+ * @return {number}
+ */
+var largestAltitude = function (gain) {
+    let res = [0];
+    // return res[res.length-1]
+    for (let i = 0; i <= gain.length - 1; i++) {
+        res.push(res[res.length - 1] + gain[i]);
+    }
+    return Math.max(...res);
+};

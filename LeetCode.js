@@ -529,3 +529,18 @@ var largestAltitude = function (gain) {
     }
     return Math.max(...res);
 };
+
+/**
+ * 
+ * 1920. Build Array from Permutation
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var buildArray = function(nums) {
+    let res = [];
+    for(let i = 0; i <= nums.length-1; i++){
+        res.push(nums[nums[i]]);
+    }
+    return res;
+};
+
